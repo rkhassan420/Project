@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Student Login</title>
+
+	<style type="text/css">
+		  section{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: px solid;
+        }        
+
+        .site{
+            margin-top: 50px;
+            width: 75%;
+            text-align: right;
+
+        }
+
+        #site_link{
+            text-decoration: none;
+            color: gray;
+        }
+
+        .form{
+        	display: flex;
+        	justify-content: center;
+        	align-items: center;
+        	margin-top: 40px;
+
+        }
+        form{
+        	border: 1px solid;
+        	border-radius: 12px;
+        	padding: 15px ;
+        	text-align: center;
+        	margin: 5px;
+        	box-shadow: 0 .5rem 1.5rem  rgba(0, 0, 0, 0.1);;
+        }
+
+       
+
+        #btn{
+        	color: black;
+  			background-color: #ffae42;
+  			border-radius: 5px;
+  			padding: 8px;  			
+  			text-decoration: none;
+        }
+
+        #pass{
+        	margin-left: 40px;
+        }
+
+         #forgot{
+        	margin-left: 190px;
+        	font-size: 12px;
+        	cursor: pointer;
+        }
+	</style>
+</head>
+<body>
+
+	 <section>
+
+        <div>
+            <a href="index.html">  <img src="./images/ali.png">  </a>
+        </div>
+
+        <div class="site">
+            <a id="site_link" href="index.html"> https://umk.rk.edu.pk/</a> <hr>
+        </div>
+
+    </section>
+
+
+    <section class="form">
+    	
+    		<form>
+
+					<img src="./images/ali.png" height="45px"><br><br>
+
+					<label for="reg">Registration No: </label>
+					<input id="reg" type="text" name="reg"><br><br>
+
+					<label for="pass">Password:</label>
+					<input id="pass" type="password" name="pass"><br>
+					
+					
+
+					<p id="forgot" onclick="show_alert()">Forgot Password</p><br>
+
+					<a href="student_main.html" id="btn" onclick="fill(event)">Login Now</a><br><br>
+
+									
+			</form><br>
+
+			
+
+
+    	
+   </section>
+
+   <p style="text-align: center; font-size: 15px;" >Copyrights © 2007 - All rights are reserved.<br>
+University of Mistr Khan, Lahore, PAKISTAN
+</p>
+
+
+<?php
+		
+
+		?>
+
+   <script type="text/javascript">
+   	
+		   	function show_alert(){
+
+		   		alert("Please contact registrar for resetting password!");
+		   	}
+
+   	
+
+		   	function fill() {
+
+		   		event.preventDefault();
+    				
+    			var reg = document.getElementById('reg').value;
+    			var pass = document.getElementById('pass').value;
+
+    			if (reg === '' || pass === '') {
+        			alert("Please enter both Registration No and Password!");
+    			} else {
+        			window.location.href = "student_main.html";
+    			}
+			}
+
+
+
+   </script>
+
+</body>
+</html>
